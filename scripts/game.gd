@@ -6,7 +6,7 @@ const FLAM = preload("res://scenes/flam.tscn")
 const STAGE = preload("res://scenes/stages/stage_1_1.tscn")
 
 var count = 1
-const MAX_MOBS = 5
+const MAX_MOBS = 10
 
 func _ready():
 	if count <= MAX_MOBS && spawn_timer.is_stopped():

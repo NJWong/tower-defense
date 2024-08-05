@@ -554,6 +554,9 @@ zoom = Vector2(4, 4)
 wait_time = 0.5
 
 [node name="BlueNinja" parent="." instance=ExtResource("4_xthuw")]
-position = Vector2(56, 64)
+position = Vector2(24, 56)
+
+[node name="BlueNinja2" parent="." instance=ExtResource("4_xthuw")]
+position = Vector2(88, 88)
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]

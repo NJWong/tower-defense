@@ -6,7 +6,7 @@ extends Node2D
 @onready var path_follow: PathFollow2D = get_parent()
 @onready var health_bar = $HealthBar
 
-const MAX_HEALTH = 20
+const MAX_HEALTH = 25
 
 var previous_position = Vector2.ZERO
 var health: int
