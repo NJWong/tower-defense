@@ -6,6 +6,7 @@ extends Node2D
 @onready var path_follow: PathFollow2D = get_parent()
 @onready var health_bar = $HealthBar
 
+const SMOKE = preload("res://scenes/attacks/smoke.tscn")
 const MAX_HEALTH = 25
 
 var previous_position = Vector2.ZERO
@@ -41,4 +42,11 @@ func take_damage(damage: int):
 	health -= damage
 	
 	if health <= 0:
+		var smoke = SMOKE.instantiate()
+		smoke.global_position = global_position
+		get_tree().root.add_child(smoke)
 		queue_free()
+		
+	animated_sprite.modulate = Color.DARK_RED
+	await get_tree().create_timer(0.1).timeout
+	animated_sprite.modulate = Color.WHITE

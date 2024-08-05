@@ -4,6 +4,8 @@ extends Node2D
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var attack_cooldown = $AttackCooldown
 
+const CLAW = preload("res://scenes/attacks/claw.tscn")
+
 var damage: int = 10
 var target: Node2D
 
@@ -35,8 +37,6 @@ func attack(target: Node2D):
 		# Attack direction
 		var angle = rad_to_deg(get_angle_to(target.global_position))
 		
-		#print("angle %f" % angle)
-		
 		if angle > -135 && angle < -45:
 			animated_sprite.play("attack_up")
 		elif angle > 45 && angle < 135:
@@ -45,9 +45,13 @@ func attack(target: Node2D):
 			animated_sprite.play("attack_left")
 		elif (angle >= -45 && angle <= 0) || (angle >= 0 && angle <= 45):
 			animated_sprite.play("attack_right")
-		else:
-			print("No animation %d" % angle)
 			
+		var claw = CLAW.instantiate()
+		claw.global_position = target.global_position
+		
+		var game = get_tree().root
+		game.add_child(claw)
+		
 		# Damage enemy
 		target.take_damage(damage)
 	
