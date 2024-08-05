@@ -48,6 +48,8 @@ func attack(target: Node2D):
 			
 		var claw = CLAW.instantiate()
 		claw.global_position = target.global_position
+		if target.global_position.x < global_position.x:
+			claw.get_node("AnimatedSprite2D").flip_h = true
 		
 		var game = get_tree().root
 		game.add_child(claw)

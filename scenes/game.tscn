@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dajlfwytsm01r"]
+[gd_scene load_steps=9 format=3 uid="uid://dajlfwytsm01r"]
 
 [ext_resource type="Texture2D" uid="uid://jjc32cws741u" path="res://assets/TilesetFloor.png" id="1_g76gl"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_o4el7"]
 [ext_resource type="Texture2D" uid="uid://b4f85dql2e3n1" path="res://assets/TilesetField.png" id="2_le44p"]
 [ext_resource type="PackedScene" uid="uid://c6lq3q3o7ix81" path="res://scenes/blue_ninja.tscn" id="4_xthuw"]
+[ext_resource type="PackedScene" uid="uid://bc48l8tww2uj" path="res://scenes/stage_ui.tscn" id="5_rghbf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dwiny"]
 texture = ExtResource("1_g76gl")
@@ -540,6 +541,12 @@ sources/1 = SubResource("TileSetAtlasSource_oe5ou")
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_o4el7")
+
+[node name="StageUI" parent="." instance=ExtResource("5_rghbf")]
+offset_left = -56.0
+offset_top = 8.0
+offset_right = -56.0
+offset_bottom = 8.0
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_x3r6r")
