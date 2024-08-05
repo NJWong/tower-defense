@@ -1,0 +1,92 @@
+[gd_scene load_steps=11 format=3 uid="uid://c6lq3q3o7ix81"]
+
+[ext_resource type="Script" path="res://scripts/blue_ninja.gd" id="1_e5m41"]
+[ext_resource type="Texture2D" uid="uid://c4x21i28leqvh" path="res://assets/characters/NinjaBlue/Attack.png" id="1_ir3f8"]
+[ext_resource type="Texture2D" uid="uid://djajpf11xm6ne" path="res://assets/characters/NinjaBlue/Idle.png" id="2_6vtd2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgwxc"]
+atlas = ExtResource("1_ir3f8")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjc5r"]
+atlas = ExtResource("1_ir3f8")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ix2oh"]
+atlas = ExtResource("1_ir3f8")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btkgx"]
+atlas = ExtResource("1_ir3f8")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lhkv"]
+atlas = ExtResource("2_6vtd2")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jdg8w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgwxc")
+}],
+"loop": true,
+"name": &"attack_down",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjc5r")
+}],
+"loop": true,
+"name": &"attack_left",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ix2oh")
+}],
+"loop": true,
+"name": &"attack_right",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btkgx")
+}],
+"loop": true,
+"name": &"attack_up",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lhkv")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6ya57"]
+radius = 24.0
+
+[node name="BlueNinja" type="Node2D"]
+script = ExtResource("1_e5m41")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_jdg8w")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="AttackCooldown" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="AttackRange" type="Area2D" parent="."]
+position = Vector2(0, -8)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange"]
+shape = SubResource("CircleShape2D_6ya57")
+
+[connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
