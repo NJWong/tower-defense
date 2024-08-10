@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dajlfwytsm01r"]
+[gd_scene load_steps=10 format=3 uid="uid://dajlfwytsm01r"]
 
 [ext_resource type="Texture2D" uid="uid://jjc32cws741u" path="res://assets/TilesetFloor.png" id="1_g76gl"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_o4el7"]
 [ext_resource type="Texture2D" uid="uid://b4f85dql2e3n1" path="res://assets/TilesetField.png" id="2_le44p"]
-[ext_resource type="PackedScene" uid="uid://c6lq3q3o7ix81" path="res://scenes/blue_ninja.tscn" id="4_xthuw"]
 [ext_resource type="PackedScene" uid="uid://bc48l8tww2uj" path="res://scenes/stage_ui.tscn" id="5_rghbf"]
+[ext_resource type="PackedScene" uid="uid://dajqxncouwuoq" path="res://scenes/tower_placement.tscn" id="6_6y7yu"]
+[ext_resource type="PackedScene" uid="uid://dovrvqkqvvgga" path="res://scenes/tower_selector.tscn" id="7_ad0gn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dwiny"]
 texture = ExtResource("1_g76gl")
@@ -560,10 +561,35 @@ zoom = Vector2(4, 4)
 [node name="SpawnTimer" type="Timer" parent="."]
 wait_time = 0.5
 
-[node name="BlueNinja" parent="." instance=ExtResource("4_xthuw")]
-position = Vector2(24, 56)
+[node name="TowerPlacement" parent="." instance=ExtResource("6_6y7yu")]
+offset_left = 88.0
+offset_top = 88.0
+offset_right = 88.0
+offset_bottom = 88.0
 
-[node name="BlueNinja2" parent="." instance=ExtResource("4_xthuw")]
-position = Vector2(88, 88)
+[node name="TowerPlacement2" parent="." instance=ExtResource("6_6y7yu")]
+offset_left = 120.0
+offset_top = 88.0
+offset_right = 120.0
+offset_bottom = 88.0
+
+[node name="TowerPlacement3" parent="." instance=ExtResource("6_6y7yu")]
+offset_left = 120.0
+offset_top = 104.0
+offset_right = 120.0
+offset_bottom = 104.0
+
+[node name="TowerPlacement4" parent="." instance=ExtResource("6_6y7yu")]
+offset_left = 24.0
+offset_top = 88.0
+offset_right = 24.0
+offset_bottom = 88.0
+
+[node name="TowerSelector" parent="." instance=ExtResource("7_ad0gn")]
+visible = false
+offset_left = 152.0
+offset_top = 8.0
+offset_right = 152.0
+offset_bottom = 8.0
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]
