@@ -5,9 +5,11 @@ extends Node2D
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var path_follow: PathFollow2D = get_parent()
 @onready var health_bar = $HealthBar
+@onready var gold_counter: GoldCounter = get_node("/root/Game/CounterUI/GoldCounter")
 
 const SMOKE = preload("res://scenes/attacks/smoke.tscn")
 const MAX_HEALTH = 25
+const GOLD_REWARD = 10
 
 var previous_position = Vector2.ZERO
 var health: int
@@ -42,6 +44,7 @@ func take_damage(damage: int):
 	health -= damage
 	
 	if health <= 0:
+		gold_counter.add_gold(GOLD_REWARD)
 		var smoke = SMOKE.instantiate()
 		smoke.global_position = global_position
 		get_tree().root.add_child(smoke)
