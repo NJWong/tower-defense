@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dajlfwytsm01r"]
+[gd_scene load_steps=12 format=3 uid="uid://dajlfwytsm01r"]
 
 [ext_resource type="Texture2D" uid="uid://jjc32cws741u" path="res://assets/TilesetFloor.png" id="1_g76gl"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_o4el7"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dajqxncouwuoq" path="res://scenes/tower_placement.tscn" id="6_6y7yu"]
 [ext_resource type="PackedScene" uid="uid://dovrvqkqvvgga" path="res://scenes/tower_selector.tscn" id="7_ad0gn"]
 [ext_resource type="PackedScene" uid="uid://orwdtluljbud" path="res://scenes/gold_counter.tscn" id="7_ugr4s"]
+[ext_resource type="PackedScene" uid="uid://d01xq5efsfyfg" path="res://scenes/wave_manager.tscn" id="8_nj6hm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dwiny"]
 texture = ExtResource("1_g76gl")
@@ -541,7 +542,7 @@ texture = ExtResource("2_le44p")
 sources/0 = SubResource("TileSetAtlasSource_dwiny")
 sources/1 = SubResource("TileSetAtlasSource_oe5ou")
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" groups=["mobs"]]
 script = ExtResource("1_o4el7")
 
 [node name="StageUI" parent="." instance=ExtResource("5_rghbf")]
@@ -559,9 +560,6 @@ layer_0/tile_data = PackedInt32Array(131073, 65536, 10, 131074, 458752, 7, 13107
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(72, 72)
 zoom = Vector2(4, 4)
-
-[node name="SpawnTimer" type="Timer" parent="."]
-wait_time = 0.5
 
 [node name="TowerLocations" type="Control" parent="."]
 layout_mode = 3
@@ -799,4 +797,4 @@ layout_mode = 1
 offset_right = 0.0
 offset_bottom = 0.0
 
-[connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]
+[node name="WaveManager" parent="." instance=ExtResource("8_nj6hm")]
