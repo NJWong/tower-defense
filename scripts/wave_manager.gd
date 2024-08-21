@@ -10,23 +10,25 @@ const STAGE_DICT = {
 }
 
 const WAVES = {
-	1: { "mob": "flam", "count": 10},
-	2: { "mob": "flam", "count": 20},
+	1: { "mob": "flam", "count": 5},
+	2: { "mob": "flam", "count": 10},
 }
 
 @onready var spawn_timer = $SpawnTimer
 @onready var game = get_node("/root/Game")
 @onready var stage_ui: StageUI = get_node("/root/Game/StageUI")
+@onready var mobs = $Mobs
 
 var current_stage = "stage_1_1"
 var wave_is_running = false
 var current_wave = 1
 var mob_count = 1
 var kill_count = 0
+var escape_count = 0
 
 func _process(delta):
 	if wave_is_running:
-		if kill_count == WAVES[current_wave]["count"]:
+		if kill_count + escape_count == WAVES[current_wave]["count"]:
 			wave_is_running = false
 			handle_next_wave()
 
@@ -40,8 +42,7 @@ func _on_spawn_timer_timeout():
 	var new_stage = STAGE_DICT[current_stage].instantiate()
 	
 	new_stage.get_node("PathFollow2D").add_child(new_flam)
-	game.add_child(new_stage)
-	new_flam.add_to_group("mobs")
+	mobs.add_child(new_stage)
 	
 	mob_count += 1
 
@@ -54,9 +55,11 @@ func stop_wave():
 	wave_is_running = false
 
 func handle_next_wave():
+	print('handle next wave')
 	current_wave += 1
 	mob_count = 1
 	kill_count = 0
+	escape_count = 0
 	stage_ui.play_pause_button.visible = false
 	stage_ui.start_button.visible = true
 	

@@ -20,6 +20,12 @@ func _ready():
 	health = MAX_HEALTH
 
 func _process(delta):
+	# Check if escaped
+	if path_follow.progress_ratio == 1:
+		wave_manager.escape_count += 1
+		get_parent().get_parent().queue_free()
+	
+	# Update along path
 	var current_position = path_follow.position
 	var direction = (current_position - previous_position).normalized()
 	
@@ -50,7 +56,7 @@ func take_damage(damage: int):
 		var smoke = SMOKE.instantiate()
 		smoke.global_position = global_position
 		get_tree().root.add_child(smoke)
-		queue_free()
+		get_parent().get_parent().queue_free()
 		
 	animated_sprite.modulate = Color.DARK_RED
 	await get_tree().create_timer(0.1).timeout
