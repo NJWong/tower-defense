@@ -2,7 +2,8 @@ extends Node2D
 class_name WaveManager
 
 const MOB_DICT = {
-	"flam": preload("res://scenes/flam.tscn")
+	"flam": preload("res://scenes/flam.tscn"),
+	"lizard": preload("res://scenes/lizard.tscn")
 }
 
 const STAGE_DICT = {
@@ -10,8 +11,8 @@ const STAGE_DICT = {
 }
 
 const WAVES = {
-	1: { "mob": "flam", "count": 10},
-	2: { "mob": "flam", "count": 10},
+	1: { "mob": "flam", "count": 10, "spawn_timer": 0.5 },
+	2: { "mob": "lizard", "count": 10, "spawn_timer": 0.25 },
 }
 
 @onready var spawn_timer = $SpawnTimer
@@ -38,15 +39,19 @@ func _on_spawn_timer_timeout():
 	if mob_count == wave["count"]:
 		spawn_timer.stop()
 	
-	var new_flam = MOB_DICT[wave["mob"]].instantiate()
+	var new_mob = MOB_DICT[wave["mob"]].instantiate()
 	var new_stage = STAGE_DICT[current_stage].instantiate()
+	var stage_mob_path_follow: MobPathFollow = new_stage.get_node("PathFollow2D")
+	stage_mob_path_follow.SPEED = new_mob.SPEED
 	
-	new_stage.get_node("PathFollow2D").add_child(new_flam)
+	stage_mob_path_follow.add_child(new_mob)
 	mobs.add_child(new_stage)
 	
 	mob_count += 1
 
 func start_wave():
+	var wave = WAVES[current_wave]
+	spawn_timer.wait_time = wave["spawn_timer"]
 	spawn_timer.start()
 	wave_is_running = true
 	
@@ -55,7 +60,6 @@ func stop_wave():
 	wave_is_running = false
 
 func handle_next_wave():
-	print('handle next wave')
 	current_wave += 1
 	mob_count = 1
 	kill_count = 0
