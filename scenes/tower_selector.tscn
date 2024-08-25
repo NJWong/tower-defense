@@ -21,7 +21,23 @@ offset_bottom = 128.0
 [node name="NinjaButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_3hlok")
-theme_override_font_sizes/font_size = 10
-text = "NINJA"
+theme_override_font_sizes/font_size = 8
+text = "NINJA - 50G"
+
+[node name="SageButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_3hlok")
+theme_override_font_sizes/font_size = 8
+text = "SAGE - 120G"
+
+[node name="CancelButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("1_3hlok")
+theme_override_font_sizes/font_size = 8
+text = "CANCEL"
 
 [connection signal="pressed" from="VBoxContainer/NinjaButton" to="." method="_on_ninja_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SageButton" to="." method="_on_sage_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/CancelButton" to="." method="_on_cancel_button_pressed"]

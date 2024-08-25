@@ -1,4 +1,4 @@
-class_name Lizard
+class_name Cyclops
 
 extends CharacterBody2D
 
@@ -9,9 +9,9 @@ extends CharacterBody2D
 @onready var wave_manager: WaveManager = get_node("/root/Game/WaveManager")
 
 const SMOKE = preload("res://scenes/attacks/smoke.tscn")
-const MAX_HEALTH = 25
-const GOLD_REWARD = 10
-const SPEED = 80
+const MAX_HEALTH = 100
+const GOLD_REWARD = 25
+const SPEED = 20
 
 var previous_position = Vector2.ZERO
 var health: int

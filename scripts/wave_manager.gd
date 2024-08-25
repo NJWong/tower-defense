@@ -3,7 +3,8 @@ class_name WaveManager
 
 const MOB_DICT = {
 	"flam": preload("res://scenes/flam.tscn"),
-	"lizard": preload("res://scenes/lizard.tscn")
+	"lizard": preload("res://scenes/lizard.tscn"),
+	"cyclops": preload("res://scenes/cyclops.tscn")
 }
 
 const STAGE_DICT = {
@@ -11,8 +12,9 @@ const STAGE_DICT = {
 }
 
 const WAVES = {
-	1: { "mob": "flam", "count": 10, "spawn_timer": 0.5 },
-	2: { "mob": "lizard", "count": 10, "spawn_timer": 0.25 },
+	1: { "mob": "flam", "count": 20, "spawn_timer": 0.5 },
+	2: { "mob": "lizard", "count": 20, "spawn_timer": 0.25 },
+	3: { "mob": "cyclops", "count": 10, "spawn_timer": 1 },
 }
 
 @onready var spawn_timer = $SpawnTimer

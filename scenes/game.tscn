@@ -550,6 +550,7 @@ offset_left = -56.0
 offset_top = 8.0
 offset_right = -56.0
 offset_bottom = 8.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_x3r6r")
@@ -558,7 +559,7 @@ layer_0/name = "map"
 layer_0/tile_data = PackedInt32Array(131073, 65536, 10, 131074, 458752, 7, 131075, 196608, 11, 196611, 196608, 11, 262147, 0, 12, 262146, 458752, 10, 262145, 65536, 10, 524289, 65536, 10, 524290, 65536, 10, 524291, 65536, 10, 524293, 65536, 10, 524292, 65536, 10, 524294, 65536, 10, 524295, 65536, 10, 524296, 458752, 10, 262152, 458752, 7, 262151, 65536, 10, 327687, 196608, 11, 393223, 196608, 11, 393222, 458752, 10, 393221, 65536, 10, 327685, 196608, 11, 262149, 196608, 11, 196613, 196608, 11, 131077, 196608, 12, 65541, 196608, 11, 5, 65536, 10, 6, 458752, 7, 7, 196608, 11, 131079, 65536, 10, 131080, 65536, 10, 8, 131072, 12, 65544, 196608, 11, 65542, 196608, 8, 131078, 262144, 10, 196614, 131072, 11, 262150, 262144, 7, 327686, 196608, 8, 196615, 196608, 11, 196616, 196608, 11, 1, 196608, 11, 65537, 262144, 12, 2, 196608, 11, 65538, 0, 12, 3, 131072, 12, 65539, 196608, 11, 4, 262144, 7, 65540, 196608, 8, 196609, 196608, 11, 196610, 196608, 8, 131076, 196608, 8, 196612, 196608, 8, 262148, 196608, 8, 327684, 196608, 8, 393220, 262144, 10, 458756, 131072, 11, 458757, 196608, 11, 458758, 0, 12, 458759, 131072, 12, 458760, 196608, 8, 327688, 196608, 8, 393224, 196608, 8, 327681, 196608, 11, 393217, 196608, 11, 458753, 131072, 12, 327682, 196608, 11, 393218, 0, 12, 458754, 131072, 11, 327683, 196608, 11, 393219, 196608, 11, 458755, 196608, 11, 0, 196608, 8, 65536, 196608, 8, 131072, 262144, 10, 196608, 196608, 12, 262144, 262144, 7, 327680, 196608, 8, 393216, 196608, 8, 458752, 196608, 8, 65543, 0, 12, 524288, 262144, 10)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(72, 72)
+position = Vector2(80, 72)
 zoom = Vector2(4, 4)
 
 [node name="TowerLocations" type="Control" parent="."]
@@ -566,216 +567,252 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 144.0
 offset_bottom = 144.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 24.0
 offset_top = 24.0
 offset_right = 24.0
 offset_bottom = 24.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement2" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 40.0
 offset_top = 24.0
 offset_right = 40.0
 offset_bottom = 24.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement3" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 56.0
 offset_top = 24.0
 offset_right = 56.0
 offset_bottom = 24.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement4" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 56.0
 offset_top = 40.0
 offset_right = 56.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement5" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 56.0
 offset_top = 56.0
 offset_right = 56.0
 offset_bottom = 56.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement6" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 56.0
 offset_top = 72.0
 offset_right = 56.0
 offset_bottom = 72.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement7" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 40.0
 offset_top = 88.0
 offset_right = 40.0
 offset_bottom = 88.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement8" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 24.0
 offset_top = 88.0
 offset_right = 24.0
 offset_bottom = 88.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement9" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 24.0
 offset_top = 104.0
 offset_right = 24.0
 offset_bottom = 104.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement10" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 24.0
 offset_top = 120.0
 offset_right = 24.0
 offset_bottom = 120.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement11" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 40.0
 offset_top = 120.0
 offset_right = 40.0
 offset_bottom = 120.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement12" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 56.0
 offset_top = 120.0
 offset_right = 56.0
 offset_bottom = 120.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement13" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 56.0
 offset_top = 88.0
 offset_right = 56.0
 offset_bottom = 88.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement14" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 56.0
 offset_top = 104.0
 offset_right = 56.0
 offset_bottom = 104.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement16" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 72.0
 offset_top = 120.0
 offset_right = 72.0
 offset_bottom = 120.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement17" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 88.0
 offset_top = 120.0
 offset_right = 88.0
 offset_bottom = 120.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement18" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 104.0
 offset_top = 120.0
 offset_right = 104.0
 offset_bottom = 120.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement19" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 120.0
 offset_top = 120.0
 offset_right = 120.0
 offset_bottom = 120.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement20" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 120.0
 offset_top = 104.0
 offset_right = 120.0
 offset_bottom = 104.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement21" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 120.0
 offset_top = 88.0
 offset_right = 120.0
 offset_bottom = 88.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement22" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 88.0
 offset_top = 88.0
 offset_right = 88.0
 offset_bottom = 88.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement23" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 88.0
 offset_top = 72.0
 offset_right = 88.0
 offset_bottom = 72.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement24" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 88.0
 offset_top = 56.0
 offset_right = 88.0
 offset_bottom = 56.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement25" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 88.0
 offset_top = 40.0
 offset_right = 88.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement26" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 88.0
 offset_top = 24.0
 offset_right = 88.0
 offset_bottom = 24.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement27" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 104.0
 offset_top = 56.0
 offset_right = 104.0
 offset_bottom = 56.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement28" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 120.0
 offset_top = 56.0
 offset_right = 120.0
 offset_bottom = 56.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement29" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 136.0
 offset_top = 56.0
 offset_right = 136.0
 offset_bottom = 56.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement30" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 56.0
 offset_top = 8.0
 offset_right = 56.0
 offset_bottom = 8.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement31" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 24.0
 offset_top = 8.0
 offset_right = 24.0
 offset_bottom = 8.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement33" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 120.0
 offset_top = 8.0
 offset_right = 120.0
 offset_bottom = 8.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement34" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 120.0
 offset_top = 24.0
 offset_right = 120.0
 offset_bottom = 24.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement35" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 24.0
 offset_top = 56.0
 offset_right = 24.0
 offset_bottom = 56.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement36" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 8.0
 offset_top = 56.0
 offset_right = 8.0
 offset_bottom = 56.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerPlacement37" parent="TowerLocations" instance=ExtResource("6_6y7yu")]
 offset_left = 136.0
 offset_top = 24.0
 offset_right = 136.0
 offset_bottom = 24.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TowerSelector" parent="." instance=ExtResource("7_ad0gn")]
 visible = false
@@ -783,6 +820,7 @@ offset_left = 152.0
 offset_top = 8.0
 offset_right = 152.0
 offset_bottom = 8.0
+metadata/_edit_use_anchors_ = true
 
 [node name="CounterUI" type="Control" parent="."]
 layout_mode = 3
@@ -791,10 +829,12 @@ offset_left = -56.0
 offset_top = 128.0
 offset_right = -8.0
 offset_bottom = 144.0
+metadata/_edit_use_anchors_ = true
 
 [node name="GoldCounter" parent="CounterUI" instance=ExtResource("7_ugr4s")]
 layout_mode = 1
 offset_right = 0.0
 offset_bottom = 0.0
+metadata/_edit_use_anchors_ = true
 
 [node name="WaveManager" parent="." instance=ExtResource("8_nj6hm")]

@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://scripts/lizard.gd" id="1_lmm2y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_loobc"]
+radius = 8.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eavfg"]
 atlas = ExtResource("1_ael36")
@@ -153,12 +154,13 @@ bg_color = Color(0.121569, 0.705882, 0.188235, 1)
 script = ExtResource("1_lmm2y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -2)
+position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_loobc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(0, -3)
+position = Vector2(-5.96046e-08, -2)
+scale = Vector2(0.875, 0.875)
 sprite_frames = SubResource("SpriteFrames_yfsb5")
 animation = &"walk_up"
 
@@ -170,7 +172,7 @@ offset_right = 6.0
 offset_bottom = 9.0
 theme_override_styles/background = SubResource("StyleBoxFlat_6yvba")
 theme_override_styles/fill = SubResource("StyleBoxFlat_eyich")
-max_value = 20.0
+max_value = 15.0
 step = 1.0
-value = 20.0
+value = 15.0
 show_percentage = false

@@ -1,4 +1,4 @@
-class_name BlueNinja
+class_name Sage
 
 extends Node2D
 
@@ -7,7 +7,7 @@ extends Node2D
 @onready var attack_cooldown = $AttackCooldown
 
 const CLAW = preload("res://scenes/attacks/claw.tscn")
-const COST = 50
+const COST = 120
 
 var damage: int = 10
 var target: Node2D
