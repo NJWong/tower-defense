@@ -10,7 +10,7 @@ const STAGE_DICT = {
 }
 
 const WAVES = {
-	1: { "mob": "flam", "count": 5},
+	1: { "mob": "flam", "count": 10},
 	2: { "mob": "flam", "count": 10},
 }
 
