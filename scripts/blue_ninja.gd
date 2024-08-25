@@ -12,7 +12,7 @@ const COST = 50
 var damage: int = 10
 var target: Node2D
 
-func sort_progress(a: Flam, b: Flam):
+func sort_progress(a: Node2D, b: Node2D):
 	var path_follow_a: PathFollow2D = a.get_parent()
 	var path_follow_b: PathFollow2D = b.get_parent()
 	
