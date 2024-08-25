@@ -107,7 +107,6 @@ animation = &"attack_down"
 autoplay = "idle_down"
 
 [node name="AttackCooldown" type="Timer" parent="."]
-wait_time = 0.75
 
 [node name="AttackRange" type="Area2D" parent="."]
 collision_layer = 0

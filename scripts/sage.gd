@@ -6,7 +6,7 @@ extends Node2D
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var attack_cooldown = $AttackCooldown
 
-const CLAW = preload("res://scenes/attacks/claw.tscn")
+const ROCK = preload("res://scenes/attacks/rock.tscn")
 const COST = 120
 
 var damage: int = 10
@@ -44,6 +44,12 @@ func attack():
 		animated_sprite.play("attack_left")
 	elif (angle >= -45 && angle <= 0) || (angle >= 0 && angle <= 45):
 		animated_sprite.play("attack_right")
+
+	var rock = ROCK.instantiate()
+	rock.global_position = global_position
+	
+	var game = get_tree().root
+	game.add_child(rock)
 	
 	for target in targets:
 		if target.has_method('take_damage'):
