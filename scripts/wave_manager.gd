@@ -14,7 +14,7 @@ const STAGE_DICT = {
 const WAVES = {
 	1: { "mob": "flam", "count": 20, "spawn_timer": 0.5 },
 	2: { "mob": "lizard", "count": 20, "spawn_timer": 0.25 },
-	3: { "mob": "cyclops", "count": 10, "spawn_timer": 1 },
+	3: { "mob": "cyclops", "count": 10, "spawn_timer": 0.5 },
 }
 
 @onready var spawn_timer = $SpawnTimer

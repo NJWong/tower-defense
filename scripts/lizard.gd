@@ -11,7 +11,7 @@ extends CharacterBody2D
 const SMOKE = preload("res://scenes/attacks/smoke.tscn")
 const MAX_HEALTH = 25
 const GOLD_REWARD = 10
-const SPEED = 80
+const SPEED = 70
 
 var previous_position = Vector2.ZERO
 var health: int

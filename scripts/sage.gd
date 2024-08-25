@@ -9,7 +9,7 @@ extends Node2D
 const ROCK = preload("res://scenes/attacks/rock.tscn")
 const COST = 120
 
-var damage: int = 10
+var damage: int = 5
 var targets: Array[Node2D] = []
 
 func sort_progress(a: Node2D, b: Node2D):

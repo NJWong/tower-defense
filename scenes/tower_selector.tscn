@@ -19,12 +19,14 @@ offset_right = 48.0
 offset_bottom = 128.0
 
 [node name="NinjaButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_3hlok")
 theme_override_font_sizes/font_size = 8
 text = "NINJA - 50G"
 
 [node name="SageButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_3hlok")
 theme_override_font_sizes/font_size = 8
