@@ -23,14 +23,14 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_3hlok")
 theme_override_font_sizes/font_size = 8
-text = "NINJA - 50G"
+text = "NINJA - 160G"
 
 [node name="SageButton" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_3hlok")
 theme_override_font_sizes/font_size = 8
-text = "SAGE - 120G"
+text = "SAGE"
 
 [node name="CancelButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2

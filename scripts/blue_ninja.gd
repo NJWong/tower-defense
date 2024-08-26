@@ -7,7 +7,7 @@ extends Node2D
 @onready var attack_cooldown = $AttackCooldown
 
 const CLAW = preload("res://scenes/attacks/claw.tscn")
-const COST = 50
+const COST = 160
 
 var damage: int = 10
 var target: Node2D

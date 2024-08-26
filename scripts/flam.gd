@@ -9,8 +9,8 @@ extends CharacterBody2D
 @onready var wave_manager: WaveManager = get_node("/root/Game/WaveManager")
 
 const SMOKE = preload("res://scenes/attacks/smoke.tscn")
-const MAX_HEALTH = 35
-const GOLD_REWARD = 10
+const MAX_HEALTH = 25
+const GOLD_REWARD = 6
 const SPEED = 30
 
 var previous_position = Vector2.ZERO

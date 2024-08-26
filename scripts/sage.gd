@@ -7,7 +7,7 @@ extends Node2D
 @onready var attack_cooldown = $AttackCooldown
 
 const ROCK = preload("res://scenes/attacks/rock.tscn")
-const COST = 120
+const COST = 100
 
 var damage: int = 5
 var targets: Array[Node2D] = []
