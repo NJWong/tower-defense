@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://d3r0pko4ii1cu"]
+
+[ext_resource type="FontFile" uid="uid://cqe0f5cadeqbk" path="res://assets/fonts/NormalFont.ttf" id="1_dln4g"]
+
+[resource]
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("1_dln4g")

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4qguldiortyy"]
+
+[ext_resource type="PackedScene" uid="uid://da3umgrvotbpb" path="res://scenes/main_menu.tscn" id="1_aorfn"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_dqdsr"]
+[ext_resource type="PackedScene" uid="uid://vdi4of6eib8u" path="res://scenes/stage_select.tscn" id="2_elgyj"]
+
+[node name="Main" type="Control"]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dqdsr")
+
+[node name="MainMenu" parent="." instance=ExtResource("1_aorfn")]
+
+[node name="StageSelect" parent="." instance=ExtResource("2_elgyj")]
+visible = false
+layout_mode = 1
+
+[connection signal="show_stage_select" from="MainMenu" to="." method="_on_main_menu_show_stage_select"]
+[connection signal="show_main_menu" from="StageSelect" to="." method="_on_stage_select_show_main_menu"]

@@ -5,10 +5,25 @@ extends Node2D
 @onready var attack_range = $AttackRange
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var attack_cooldown = $AttackCooldown
+@onready var level_2 = $Level2
+@onready var level_3 = $Level3
+@onready var gold_counter: GoldCounter = get_node("/root/Game/CounterUI/GoldCounter")
 
 const CLAW = preload("res://scenes/attacks/claw.tscn")
-const COST = 160
+const COST = 100
 
+var upgrades = {
+	2: {
+		"cost": 120,
+		"damage": 15
+	},
+	3: {
+		"cost": 250,
+		"damage": 20
+	}
+}
+
+var level: int = 1
 var damage: int = 10
 var target: Node2D
 
@@ -70,3 +85,22 @@ func _on_attack_cooldown_timeout():
 	else:
 		# Stop the cooldown if there is no target
 		attack_cooldown.stop()
+
+func upgrade():
+	level += 1
+	damage = upgrades[level]["damage"]
+	gold_counter.gold_count -= upgrades[level]["cost"]
+	
+	if level == 2:
+		level_2.visible = true
+	elif level == 3:
+		level_3.visible = true
+
+func _on_select_button_pressed():
+	var tower_details: TowerDetails = get_node("/root/Game/TowerDetails")
+	
+	if tower_details:
+		if !tower_details.visible:
+			tower_details.tower_ref = self
+			tower_details.tower_upgrades = upgrades
+			tower_details.show_ui()

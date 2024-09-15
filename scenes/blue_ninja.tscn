@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://c6lq3q3o7ix81"]
+[gd_scene load_steps=16 format=3 uid="uid://c6lq3q3o7ix81"]
 
 [ext_resource type="Script" path="res://scripts/blue_ninja.gd" id="1_e5m41"]
 [ext_resource type="Texture2D" uid="uid://c4x21i28leqvh" path="res://assets/characters/NinjaBlue/Attack.png" id="1_ir3f8"]
 [ext_resource type="Texture2D" uid="uid://djajpf11xm6ne" path="res://assets/characters/NinjaBlue/Idle.png" id="2_6vtd2"]
+[ext_resource type="Texture2D" uid="uid://bkt4r3lr4s5fu" path="res://assets/characters/Shuriken.png" id="4_rgns1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kgwxc"]
 atlas = ExtResource("1_ir3f8")
@@ -115,4 +116,32 @@ collision_layer = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange"]
 shape = SubResource("CircleShape2D_6ya57")
 
+[node name="SelectButton" type="Button" parent="."]
+visibility_layer = 0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Level1" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(-2.875, -3.875)
+scale = Vector2(0.234375, 0.234375)
+texture = ExtResource("4_rgns1")
+
+[node name="Level2" type="Sprite2D" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(3.12109, -3.87891)
+scale = Vector2(0.234863, 0.234863)
+texture = ExtResource("4_rgns1")
+
+[node name="Level3" type="Sprite2D" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(0.125, -6.875)
+scale = Vector2(0.234375, 0.234375)
+texture = ExtResource("4_rgns1")
+
 [connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
+[connection signal="pressed" from="SelectButton" to="." method="_on_select_button_pressed"]

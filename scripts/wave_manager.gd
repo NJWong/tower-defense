@@ -14,17 +14,26 @@ const STAGE_DICT = {
 const WAVES = {
 	1: { "mob": "flam", "count": 5, "spawn_timer": 0.5 },
 	2: { "mob": "flam", "count": 10, "spawn_timer": 0.5 },
-	3: { "mob": "flam", "count": 15, "spawn_timer": 0.5 },
-	4: { "mob": "lizard", "count": 5, "spawn_timer": 0.25 },
-	5: { "mob": "lizard", "count": 10, "spawn_timer": 0.25 },
-	6: { "mob": "lizard", "count": 15, "spawn_timer": 0.25 },
-	7: { "mob": "cyclops", "count": 5, "spawn_timer": 0.5 },
-	8: { "mob": "cyclops", "count": 10, "spawn_timer": 0.5 },
-	9: { "mob": "cyclops", "count": 15, "spawn_timer": 0.5 },
-	10: { "mob": "flam", "count": 30, "spawn_timer": 0.5 },
-	11: { "mob": "lizard", "count": 30, "spawn_timer": 0.25 },
-	12: { "mob": "cyclops", "count": 30, "spawn_timer": 0.5 },
+	3: { "mob": "lizard", "count": 5, "spawn_timer": 0.25 },
+	4: { "mob": "lizard", "count": 10, "spawn_timer": 0.25 },
+	5: { "mob": "cyclops", "count": 5, "spawn_timer": 0.5 },
+	6: { "mob": "cyclops", "count": 10, "spawn_timer": 0.5 },
 }
+
+#const WAVES = {
+	#1: { "mob": "flam", "count": 5, "spawn_timer": 0.5 },
+	#2: { "mob": "flam", "count": 10, "spawn_timer": 0.5 },
+	#3: { "mob": "flam", "count": 15, "spawn_timer": 0.5 },
+	#4: { "mob": "lizard", "count": 5, "spawn_timer": 0.25 },
+	#5: { "mob": "lizard", "count": 10, "spawn_timer": 0.25 },
+	#6: { "mob": "lizard", "count": 15, "spawn_timer": 0.25 },
+	#7: { "mob": "cyclops", "count": 5, "spawn_timer": 0.5 },
+	#8: { "mob": "cyclops", "count": 10, "spawn_timer": 0.5 },
+	#9: { "mob": "cyclops", "count": 15, "spawn_timer": 0.5 },
+	#10: { "mob": "flam", "count": 30, "spawn_timer": 0.5 },
+	#11: { "mob": "lizard", "count": 30, "spawn_timer": 0.25 },
+	#12: { "mob": "cyclops", "count": 30, "spawn_timer": 0.5 },
+#}
 
 @onready var spawn_timer = $SpawnTimer
 @onready var game = get_node("/root/Game")

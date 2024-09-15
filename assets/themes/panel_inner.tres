@@ -1,0 +1,13 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cwqh82n7jbb7u"]
+
+[ext_resource type="Texture2D" uid="uid://d3075vrg7d68a" path="res://assets/ui/nine_path_panel_interior.png" id="1_btpjm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hlb7f"]
+texture = ExtResource("1_btpjm")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[resource]
+Panel/styles/panel = SubResource("StyleBoxTexture_hlb7f")

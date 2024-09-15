@@ -3,7 +3,7 @@ class_name GoldCounter
 
 @onready var counter_label = $CounterLabel
 
-var gold_count = 320
+var gold_count = 280
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

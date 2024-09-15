@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dajlfwytsm01r"]
+[gd_scene load_steps=13 format=3 uid="uid://dajlfwytsm01r"]
 
 [ext_resource type="Texture2D" uid="uid://jjc32cws741u" path="res://assets/TilesetFloor.png" id="1_g76gl"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_o4el7"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dovrvqkqvvgga" path="res://scenes/tower_selector.tscn" id="7_ad0gn"]
 [ext_resource type="PackedScene" uid="uid://orwdtluljbud" path="res://scenes/gold_counter.tscn" id="7_ugr4s"]
 [ext_resource type="PackedScene" uid="uid://d01xq5efsfyfg" path="res://scenes/wave_manager.tscn" id="8_nj6hm"]
+[ext_resource type="PackedScene" uid="uid://2lccdr3xjb5f" path="res://scenes/tower_details.tscn" id="9_cse6p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dwiny"]
 texture = ExtResource("1_g76gl")
@@ -838,3 +839,10 @@ offset_bottom = 0.0
 metadata/_edit_use_anchors_ = true
 
 [node name="WaveManager" parent="." instance=ExtResource("8_nj6hm")]
+
+[node name="TowerDetails" parent="." instance=ExtResource("9_cse6p")]
+visible = false
+offset_left = 152.0
+offset_top = 8.0
+offset_right = 152.0
+offset_bottom = 8.0
